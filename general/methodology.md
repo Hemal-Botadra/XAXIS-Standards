@@ -5,11 +5,11 @@ The following are key points and ideas that make up our Development methodology 
 #### Lets get modular
 We use the foundation of Atomic Design to help create user experiences (UX) that are forward thinking and ultimately designed with a user first approach. Atomic design enables us to design separate components, in this case called **Modules** (organisms) that together can be joined to create numerous pages.
 
-#### Atoms
+### Atoms
 Every inidividual HTML element is an Atom. e.g:
 ``<label></label>`` or ``<input type="text" ... />``
 
-#### Molecules
+### Molecules
 Molecules are simple UI clusters of Atom's. The simplest explanation is to use the below example:
 
 ````
@@ -23,7 +23,7 @@ Molecules are simple UI clusters of Atom's. The simplest explanation is to use t
 ````
 Again the above is a simple example. In real world situations these may be larger entities. Be careful with confusing Molecules with Organisms.
 
-#### Organisms
+### Organisms
 We refer to organisms as Modules, we like that word better, however the principles are the same. A module is a cluster of Molecules that form complex UI groups. In keeping with the above examples:
 
 ````
@@ -41,7 +41,7 @@ We refer to organisms as Modules, we like that word better, however the principl
                 <div class="form-group">
                     <label>Form Label</label>
                     <input type="text" placeholder="This is an input" />
-                    <button>I am a button</button>
+                    <button>Submit</button>
                 </div>
             </form>
         </div>
@@ -50,8 +50,8 @@ We refer to organisms as Modules, we like that word better, however the principl
 ````
 As you can see we have an encompassing module which has a title, paragraph and form inside it, forming a module (organism).
 
-#### Templates
+### Templates
 Simply put a template is a wireframe and example of the finished page <u>**without**</u> real content.
 
-#### Pages
+### Pages
 The complete article a finished page with real data.
