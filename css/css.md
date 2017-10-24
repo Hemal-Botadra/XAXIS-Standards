@@ -1,9 +1,9 @@
-## CSS
+## CSS roundup
 
 ### WE DO NOT WRITE VANILLA CSS!!!
 You must use a build processor like **Gulp**, DO NOT WRITE standard CSS. Why would you when you can write SASS and nest things?
 
-###Browse Support
+###Browser Support
 We only support modern browsers, simply because the tech stack we use needs modern browsers.
 
 ### Responsive Framework
@@ -46,4 +46,6 @@ For example the post module/block would look like so:
 }
 ````
 
-You will also notice that the above is nested, as we only use SCSS to write styles. Please check out the [build tools](general/build-tools.md) page for more information
+You will also notice that the above is nested, as we only use SCSS to write styles. Please check out the [build tools](general/build-tools.md) page for more information on the preprocessing methods.
+
+For complete formatting information please check out the [css/scss formatting]() page.
