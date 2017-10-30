@@ -25,7 +25,7 @@ We expect the following from all developers:
 * Understand the methodology
 * Write code with the knowledge that someone else may need to maintain it in the future.
 * Select tools that ultimatley benefit the project.
-* \<!--Comment-->, /\*Comment\*/ and // Comment - This ultimatley saves us all time in the future.
+* ``<!--Comment-->``, ``/*Comment*/`` and ``// Comment`` - This ultimatley saves us all time in the future.
 * Peer code reviews should be standard. 
 * Have fun, coding isnt a chore :-)
 
