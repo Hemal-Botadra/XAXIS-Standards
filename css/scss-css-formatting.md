@@ -1,9 +1,5 @@
-#CSS/SCSS Formatting
+# CSS/SCSS Formatting
 As stated previously we ensure all CSS is actually written in SCSS, being careful when and where to nest our style elements.
-
-##Naming conventions
-*
-* Use camCase for SCSS variable names i.e ``$darkGray``
 
 ## Classes, IDs &amp; SCSS Variables.
 
@@ -33,7 +29,7 @@ As stated previously we ensure all CSS is actually written in SCSS, being carefu
 
 ####SCSS Variables
 Like IDs use camelCase for SCSS Variable names:
-````scss
+````css
 $fontDefault: 'Helvetica', sans-serif;
 $darkGray: #333;
 $red: #F00;
