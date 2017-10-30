@@ -1,9 +1,9 @@
 # CSS/SCSS Formatting
 As stated previously we ensure all CSS is actually written in SCSS, being careful when and where to nest our style elements.
 
-## Classes, IDs &amp; SCSS Variables.
+##  Classes, IDs &amp; SCSS Variables.
 
-#### IDs
+####  IDs
 **DO NOT** use `id` for styling purposes. Acceptable uses for `id` include:
 
 * JavaScript selection - prefix these with `js-` to indicate they are for JavaScript only
@@ -27,9 +27,9 @@ As stated previously we ensure all CSS is actually written in SCSS, being carefu
 <div class="content" id="mainContent"> ... </div>
 ```
 
-####SCSS Variables
+#### SCSS Variables
 Like IDs use camelCase for SCSS Variable names:
-````css
+````scss
 $fontDefault: 'Helvetica', sans-serif;
 $darkGray: #333;
 $red: #F00;
@@ -41,10 +41,10 @@ Use dashes **-** **NOT** undescores **_** in class names.
 <div class="camel-case"> ... </div>
 ```
 
-##Name Delimiters
+## Name Delimiters
 For more information on our naming conventions and structures please visit our [CSS](css/css.md) page. Alternatively read our [methodology](general/methodology.md).
 
-####Base Elements (Molecules)c
+#### Base Elements (Molecules)c
 ````scss
 .post {
     position: relative;
@@ -52,7 +52,7 @@ For more information on our naming conventions and structures please visit our [
     border: 1px solid black;
 }
 ````
-####Sub Componenets
+#### Sub Componenets
 
 Use a hyphen before a class member (sub-component) name, prefixed with the base class name. Ensure it is nested as these sub-components are only used within their base element blocks.
 
@@ -75,7 +75,7 @@ Use a hyphen before a class member (sub-component) name, prefixed with the base 
 }
 ````
 
-###Modifiers
+### Modifiers
 
 If a modifier needs to be created. i.e a background modifier. New button modifier etc. Please note we at times append ``!important`` to ensure it is style used.
 
@@ -91,7 +91,7 @@ If a modifier needs to be created. i.e a background modifier. New button modifie
     background-color: black !important;
 }
 ````
-##Brackets
+## Brackets
 Place the opening curly-bracket of each rule block on the same line as the last selector.
 
 Place the closing curly-bracket of each rule block on its own line after the final property of the rule block.
@@ -101,7 +101,7 @@ Place the closing curly-bracket of each rule block on its own line after the fin
     font-family: 'Helvetica', sans-serif;
 }
 ````
-##Indentation
+## Indentation
 We use the google css standards for spacing: 
 ````
 Tab Size = 2
@@ -109,7 +109,7 @@ Indent = 2
 Continuation Indent = 2
 ````
 
-## Property Whitespace
+##  Property Whitespace
 
 Put each property on its own line.
 
@@ -122,7 +122,7 @@ Follow each property with a colon and a single space.
 }
 ```
 
-## Semi-colons
+##  Semi-colons
 
 Follow each property value with a semi-colon.
 
@@ -133,10 +133,10 @@ Follow each property value with a semi-colon.
 }
 ```
 
-##Trailing Whitespaces
+## Trailing Whitespaces
 Remove all trailing whitespace.
 
-## Rule Block Separation
+##  Rule Block Separation
 
 Separate each rule block by an empty line.
 
@@ -153,7 +153,7 @@ Separate each rule block by an empty line.
 }
 ```
 
-## Property Order
+##  Property Order
 
 CSS properties should be grouped by commonality (display, then box-model, then positioning, then background/color, then typography, then misc/etc).
 
@@ -174,7 +174,7 @@ CSS properties should be grouped by commonality (display, then box-model, then p
 }
 ```
 
-## Vendor Prefixes
+##  Vendor Prefixes
 
 As we use a build tool to generate our css, there is no need to vendor-prefix within your SCSS file. This will be done via the compiler. Please take a look at our [Build Tools]() page for more info.
 
@@ -182,7 +182,7 @@ As a rule, we accommodate the latest 2 browser versions, we do not support below
 
 Use resources like <http://caniuse.com/> to see whether features can be used, and in what browser.
 
-## Quotes
+##  Quotes
 
 Use single quotes.
 
@@ -227,7 +227,7 @@ input[type='text'] {
 }
 ```
 
-## Multiple Selectors
+##  Multiple Selectors
 
 Separate multiple selectors in the same rule block with a comma and place each selector on a new line.
 
@@ -239,7 +239,7 @@ Separate multiple selectors in the same rule block with a comma and place each s
 }
 ```
 
-## Comments & Grouping
+##  Comments & Grouping
 
 Group related rule blocks by base object using the standardized section comment style.
 
@@ -282,7 +282,7 @@ Horizontal List
 }
 ```
 
-## Hexadecimal Notation
+##  Hexadecimal Notation
 
 Use three characters and lowercase hexadecimal notation where you can. We se SCSS so define variables once then reuse through documents.
 
@@ -291,7 +291,7 @@ Use three characters and lowercase hexadecimal notation where you can. We se SCS
     background-color: #f00;
 }
 ```
-## TODO Comments
+##  TODO Comments
 
 Mark todos and action items with a comment that includes `TODO`. Be sure that `TODO` is always uppercase.
 
