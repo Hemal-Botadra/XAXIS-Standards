@@ -1,4 +1,7 @@
-## HTML
+## HTML Roundup
+
+* Take me to the [HTML Formatting]() page.
+
 #### Lets get modular
 We use the foundation of Atomic Design to help create user experiences (UX) that are forward thinking and ultimately designed with a user first approach. Atomic design enables us to design separate components, in this case called **Modules** (organisms) that together can be joined to create numerous pages.
 

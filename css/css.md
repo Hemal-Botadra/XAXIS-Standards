@@ -1,4 +1,6 @@
-## CSS roundup
+## CSS Roundup
+
+* Take me to the [CSS/SCSS Formatting](css/scss-css-formatting.md) page.
 
 ### WE DO NOT WRITE VANILLA CSS!!!
 You must use a build processor like **Gulp**, DO NOT WRITE standard CSS. Why would you when you can write SASS and nest things?
