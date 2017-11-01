@@ -39,10 +39,32 @@ Always use double quotes around attribute values.
 ## Boolean Attributes
 Boolean attributes should not have a value.
 
-
+```html
+<input type="text" disabled readonly />
+```
 
 ## Comments &amp; Grouping
+Use standard HTML comments to indicate the beginning and end of large sections of code.
+
+```html
+<!-- Main Content -->
+
+<main>
+    ...
+</main>
+
+<!-- // End Main Content -->
+```
 
 ## TODO Comments
+
+Mark todos and action items with a comment that includes `TODO`. Be sure that `TODO` is always uppercase.
+
+```html
+<!-- TODO - Review content styles -->
+<div>
+    ...
+</div>
+```
 
 # HTML Best Practices
