@@ -41,6 +41,18 @@ Use dashes **-** **NOT** undescores **_** in class names.
 <div class="camel-case"> ... </div>
 ```
 
+##### Class Naming Quality
+
+Class names should be specific enough so that you can comprehend the name without context, but generic enough for reuse throughout the code base.
+
+```scss
+.post {}
+.kamino {}
+.container {}
+.btn {}
+.icn {}
+```
+
 ## Name Delimiters
 For more information on our naming conventions and structures please visit our [CSS](css/css.md) page. Alternatively read our [methodology](general/methodology.md).
 
@@ -299,5 +311,132 @@ Mark todos and action items with a comment that includes `TODO`. Be sure that `T
 /* TODO - Review content styles */
 .selector {
     color: #ff0000;
+}
+```
+## Contextual Selectors
+
+Avoid cross module contextual selection.
+
+```css
+/* DO NOT */
+.selector .hrz { 
+
+}
+```
+
+If a single module can make use of a contextual selector (as the markup structure is known), be sure to apply it with the proper depth of applicability.
+
+```css
+.list > li { }
+```
+
+## Selector Specificity
+
+Keep selector specificity as low as possible, opting for a single class as the best selector.
+
+```css
+.selector {
+    padding: 20px;
+    background-color: #ccc;
+}
+```
+
+**Resources**
+
+* <http://www.w3.org/TR/css3-selectors/#specificity>
+* <http://www.stuffandnonsense.co.uk/archives/css_specificity_wars.html>
+* <http://css-tricks.com/specifics-on-css-specificity/>
+* <http://www.standardista.com/css3/css-specificity/>
+
+## Shorthand
+
+Use of shorthand is encouraged unless setting a single value.
+
+When using shorthand, be explicit and define all values.
+
+```css
+.selector {
+    margin: 12px 0 16px 0;
+}
+```
+
+## Units
+
+We will work with 3 units of measure being pixels, rem's and percentages. These units of measure will be used in different ways as outlined below.
+
+**PLEASE NOTE:** The body font size will be in pixels all other font sizes will be in rem's.
+
+The body font size should be in **pixels**.
+```scss
+html {
+    font-size: 16px;
+}
+```
+
+All font sizes thereafter should be in rem's. 1rem being equal to 16px.
+
+```css
+.my-title {
+    font-size: 1rem;
+}
+```
+
+Spacing should be done primarily using pixels.
+```scss
+.mt-10 {
+    margin-top: 10px;
+}
+```
+
+However if using Bootstrap 4, you have the option of using rem's for more information visit the [Bootstrap 4 documentation](https://getbootstrap.com/docs/4.0/utilities/spacing/).
+
+... Assuming the root font size is 16px.
+
+```scss
+mt-1 {
+    margin-top: .25rem; // 4px.
+}
+
+.mt-2 {
+    margin-top: .5rem; // 8px
+} 
+
+.mt-3 {
+    margin-top: 1rem; // Default value (16px)
+}
+```
+Whichever unit of measure chosen be sure to stick to using it throughout the project to not confuse future people working on the project.
+
+Container and Block sizing
+```scss
+.element-block {
+    width: 25%;
+    margin-bottom: 10px;
+}
+```
+
+## Line-Heights
+
+Declare line-height values as unit-less. Unit-less line heights act as a multiplier to the text size for a given element.
+
+```scss
+.selector {
+    font-size: 16px;
+    line-height: 1.5;
+}
+```
+
+## Color Values
+
+Use hexadecimal notation for color values. RGBA is acceptable if opacity is needed, but be sure to provide a fallback for browsers that don't support RGBA.
+
+```css
+.selector {
+    color: #ff0000;
+}
+
+.selector {
+    color: #ff0000; /* fallback for non-rgba browsers */
+    color: rgba(255, 0, 0, 0.8);
 }
 ```
