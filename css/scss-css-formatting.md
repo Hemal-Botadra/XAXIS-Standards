@@ -11,7 +11,7 @@ As stated previously we ensure all CSS is actually written in SCSS, being carefu
 * Jump links between sections of a page
 
 ```html
-<div class="camelCase" id="js-camelCase"> ... </div>
+<div class="js-camel-case" id="js-camelCase"> ... </div>
 ```
 
 ```html
@@ -39,6 +39,7 @@ $red: #F00;
 Use dashes **-** **NOT** undescores **_** in class names.
 ```html
 <div class="camel-case"> ... </div>
+<div class="js-camel-case"> ... </div>
 ```
 
 ##### Class Naming Quality
