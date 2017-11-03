@@ -39,6 +39,7 @@ The modules folders contain:
         |   ├── _block?.scss
         |   └── blocks?
         |       └── _block?.scss
+        ├── ie8.scss
         └── styles.scss
 ```
 
@@ -52,18 +53,31 @@ When building a comprehensive CMS with different sub sections that do not follow
         |   ├── _fonts.scss
         |   ├── _typography.scss
         |   └── _overrides.scss
-        ├── helpers
+        ├── helpers    
         |   ├── _utils.scss
         |   └── _vars.scss
-        ├── shared
-        |   ├── _header.scss
-        |   ├── _main.scss
-        |   ├── _footer.scss
-        |   └── _nav.scss
-        ├── modules
-        |   ├── _block?.scss
-        |   └── blocks?
-        |       └── _block?.scss
+        ├── admin
+        |   ├── shared
+        |   |   ├── _header.scss
+        |   |   ├── _main.scss
+        |   |   ├── _footer.scss
+        |   |   └── _nav.scss
+        |   └── modules
+        |       ├── _block?.scss
+        |       └── blocks?
+        |           └── _block?.scss
+        ├── auth
+        |   ├── shared
+        |   |   ├── _header.scss
+        |   |   ├── _main.scss
+        |   |   ├── _footer.scss
+        |   |   └── _nav.scss
+        |   └── modules
+        |       ├── _block?.scss
+        |       └── blocks?
+        |           └── _block?.scss
+        ├── admin.scss
+        ├── auth.scss
         └── styles.scss
 ```
 
@@ -104,13 +118,14 @@ Variables defined outside of ruleset are considered to be global and are used fo
 
 Define all global variables in the global `helpers/_vars.scss` partial.
 
-Write global variables using uppercase letters delimited by underscores.
+Write global variables using camelCase.
 
 ```scss
-$BRAND_COLOR_RED: #ff0000;
+$white: #fff;
+$darkGray: #333;
 
 .nav a {
-    color: $BRAND_COLOR_RED;
+    color: $darkGray;
 }
 ```
 
@@ -125,14 +140,14 @@ If the variable is used by more than one file in the module, define it in a modu
 To prevent variable collisions, module variables should be prefixed with the base object name separated by a single dash.
 
 ```scss
-$example-SPACING_UNIT: 10px;
+$example-spacingUnit: 10px;
 
-.example-hd {
-    margin-bottom: $example-SPACING_UNIT;
+.example-mt {
+    margin-top: $example-spacingUnit;
 }
 
-.example-bd {
-    margin-bottom: $example-SPACING_UNIT;
+.example-mb {
+    margin-bottom: $example-spacingUnit;
 }
 ```
 
@@ -140,19 +155,19 @@ $example-SPACING_UNIT: 10px;
 
 Private variables are defined inside a single ruleset and are intended for use only within that ruleset.
 
-Write private variables using uppercase letters delimited by underscores, and preceded by a single underscore.
+Write private variables using camelCase letters preceded by a single underscore.
 
 ```scss
-.exampleObject {
-    $_SIZE: 200px;
-    $_OFFSET: -($_SIZE / 2); // Pull the object half its size to center it.
+.example-object {
+    $_size: 500px;
+    $_offset: -($_size / 2); // Pull the object half its size to center it.
     position: absolute;
     top: 50%;
     left: 50%;
-    height: $_SIZE;
-    width: $_SIZE;
-    margin-top: $_OFFSET;
-    margin-left: $_OFFSET;
+    height: $_size;
+    width: $_size;
+    margin-top: $_offset;
+    margin-left: $_offset;
 }
 ```
 
@@ -163,73 +178,33 @@ Operators should always be surrounded by a single space.
 Use of operators should always be accompanied by a comment.
 
 ```scss
-.exampleObject {
-    $_SIZE: 100px;
-    $_PULL: -($_SIZE / 2); /* Pull the object half its size to center it. */
+.example-object {
+    $_size: 100px;
+    $_pull: -($_size / 2); /* Pull the object half its size to center it. */
     position: absolute;
     top: 50%;
     left: 50%;
-    height: $_SIZE;
-    margin-top: $_PULL;
-    margin-left: $_PULL;
+    height: $_size;
+    margin-top: $_pull;
+    margin-left: $_pull;
 }
 ```
 
 ## Nesting
 
-Avoid nesting selectors.
+Ensure you are only nesting module components. Do not nest utilities or modifiers to ensure they are not bound to a container. 
 
 ```scss
 /* DO */
-.hList {
-   @include clearfix();
-}
 
-.hList > li {
-    float: left;
+.text-black {
+    color:black;
 }
 
 /* DO NOT */
-.hList {
-    @include clearfix();
-
-    > li {
-        float: left;
-    }
-}
-```
-
-Also avoid nesting pseudo classes & pseudo elements.
-
-```scss
-/* DO */
-.nav a {
-    color: #ffffff;
-}
-
-.nav a:hover {
-    color: #00ff00;
-}
-
-/* DO NOT */
-.nav a {
-    color: #ffffff;
-
-    &:hover {
-        color: #00ff00;
-    }
-}
-```
-
-There are a few scenarios where nesting is acceptable. These includes things like sandboxing an entire stylesheet to avoid conflicting selectors, wrapping a WYSIWYG stylesheet, and nesting media queries to make a small change that's not at a minor breakpoint.
-
-When nesting is appropriate, all selectors should be indented one level deeper than the parent selector.
-
-```scss
-.exampleObject {
-    padding: 10px;
-    @media (max-width: 500px) {
-        padding: 20px;
+.element {
+    .text-black {
+        color:black;
     }
 }
 ```
@@ -239,32 +214,6 @@ When nesting is appropriate, all selectors should be indented one level deeper t
 Use mixins to define styles that can be reused throughout the site to avoid repeating common code blocks. Mixins can be used at both the global and module level. Mixins used by a single module should be prefixed with the module name, and defined in the appropriate location.
 
 Mixin definitions should always include the parenthesis.
-
-Provide default arguments when their absence could cause a compilation error, otherwise, avoid using default arguments in favor of optional arguments.
-
-```scss
-@mixin isVisuallyHidden() {
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    position: absolute;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-```
-
-If a mixin is used to produce vendor prefixes of a single property, it should mimic the W3C naming and syntax.
-
-```scss
-@mixin transition($transition) {
-    -webkit-transition: $transition;
-    -moz-transition: $transition;
-    -o-transition: $transition;
-    transition: $transition;
-}
-```
 
 ## @extend
 
@@ -277,23 +226,23 @@ Do not use `@extend`.
     border: 1px solid #cccccc;
 }
 
-.message_success { color: #00ff00; }
-.message_error { color: #ff0000; }
+.message-success { color: #00ff00; }
+.message-error { color: #ff0000; }
 
 /* DO NOT*/
 .message {
     padding: 10px;
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
 }
 
-.message_success {
+.message-success {
     @extend .message;
-    color: #00ff00;
+    color: #0f0;
 }
 
-.message_error {
+.message-error {
     @extend .message;
-    color: #ff0000;
+    color: #f00;
 }
 ```
 
@@ -306,7 +255,7 @@ Flow control directives should never use the single line syntax.
 Curly braces should be formatted identically to selectors.
 
 ```scss
-.exampleObject {
+.example-object {
     @if 1 + 1 == 2 {
         border: 1px solid;
     }
@@ -328,8 +277,9 @@ Do not include the file extension when using `@import`.
 It is acceptable to use `@media` rules nested in selectors if they are used for small tweaks. Separate stylesheets (`screen`, `screen_small`, `screen_large`, etc) should be used for major breakpoints.
 
 ```scss
-.exampleObject {
+.example-object {
     padding: 10px;
+    
     @media (max-width: 500px) {
         padding: 20px;
     }
