@@ -4,6 +4,7 @@
 1. [Overview](#overview)
 2. [Methodology](/general/methodology.md)
 3. [Folder Structure](/general/folder-structure.md)
+4. [SCSS Folder Structure](css/scss-folder-structure.md)
 4. [Build Tools](/general/build-tools.md)
 5. [HTML Roundup](/html/html.md)
 5. [HTML Formatting](/html/html-formatting.md)
