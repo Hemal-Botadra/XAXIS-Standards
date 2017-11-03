@@ -11,7 +11,6 @@ Our standard folder structure is as follows:
     ├── scss
     └── js
 ```
-
 When compiled via gulp for distribution.
 
 ```diff
