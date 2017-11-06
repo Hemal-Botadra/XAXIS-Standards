@@ -2,18 +2,18 @@
 
 ## Table of Contents
 1. [Overview](#overview)
-1. [Methodology](/generald)
-1. [Folder Structure](/general/folder-structure.md)
+1. [Methodology](generald)
+1. [Folder Structure](general/folder-structure.md)
 1. [SCSS Folder Structure](css/scss-folder-structure.md)
-1. [Build Tools](/general/build-tools.md)
-1. [HTML Roundup](/html)
-1. [HTML Formatting](/html/html-formatting.md)
-1. [CSS Roundup](/css)
+1. [Build Tools](general/build-tools.md)
+1. [HTML Roundup](html)
+1. [HTML Formatting](html/html-formatting.md)
+1. [CSS Roundup](css)
 1. [CSS/SCSS Formatting](css/scss-css-formatting.md)
-1. [Javascript Formatting &amp; Framework](/js)
-1. [JSON Formatting](/js/json.md)
-1. [API Formatting](/api)
-1. [PHP Formatting](/php)
+1. [Javascript Formatting &amp; Framework](js)
+1. [JSON Formatting](js/json.md)
+1. [API Formatting](api)
+1. [PHP Formatting](php)
 
 ## <a name="overview"></a>Overview
 
