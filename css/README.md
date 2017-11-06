@@ -1,11 +1,12 @@
 ## CSS Roundup
 
-* Take me to the [CSS/SCSS Formatting](css/scss-css-formatting.md) page.
+* Take me to the [CSS/SCSS Formatting](/scss-css-formatting.md) page.
+* Take me to the [CSS/SCSS Formatting](/scss-folder-structure.md) page.
 
 ### WE DO NOT WRITE VANILLA CSS!!!
 You must use a build processor like **Gulp**, DO NOT WRITE standard CSS. Why would you when you can write SASS and nest things?
 
-###Browser Support
+### Browser Support
 We only support modern browsers, simply because the tech stack we use needs modern browsers.
 
 ### Responsive Framework
@@ -35,7 +36,7 @@ We style with classes only and we write in a way to ensure modules/blocks are co
 For example the post module/block would look like so:
 
 ````
-.post {
+.post-card {
 
     .post-header {
     }

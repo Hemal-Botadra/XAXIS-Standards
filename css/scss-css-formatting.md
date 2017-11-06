@@ -47,7 +47,7 @@ Use dashes **-** **NOT** undescores **_** in class names.
 Class names should be specific enough so that you can comprehend the name without context, but generic enough for reuse throughout the code base.
 
 ```scss
-.post {}
+.post-card {}
 .kamino {}
 .container {}
 .btn {}
@@ -59,7 +59,7 @@ For more information on our naming conventions and structures please visit our [
 
 #### Base Elements (Molecules)c
 ````scss
-.post {
+.post-card {
     position: relative;
     padding: 10px;
     border: 1px solid black;
@@ -70,7 +70,7 @@ For more information on our naming conventions and structures please visit our [
 Use a hyphen before a class member (sub-component) name, prefixed with the base class name. Ensure it is nested as these sub-components are only used within their base element blocks.
 
 ````scss
-.post {
+.post-card {
     padding: 10px;
     position: relative;
     
@@ -261,7 +261,7 @@ Group related rule blocks by base object using the standardized section comment 
 Post
 ------------------------------------------------------------------------ */
 
-.post {
+.post-card {
     padding: 20px;
     background-color: #ccc;
 }
