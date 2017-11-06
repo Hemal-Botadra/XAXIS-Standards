@@ -2,18 +2,18 @@
 
 ## Table of Contents
 1. [Overview](#overview)
-2. [Methodology](/general/methodology.md)
+2. [Methodology](/general/README.md)
 3. [Folder Structure](/general/folder-structure.md)
 4. [SCSS Folder Structure](css/scss-folder-structure.md)
 4. [Build Tools](/general/build-tools.md)
-5. [HTML Roundup](/html/html.md)
+5. [HTML Roundup](/html/README.md)
 5. [HTML Formatting](/html/html-formatting.md)
-6. [CSS Roundup](css/css.md)
+6. [CSS Roundup](css/README.md)
 7. [CSS/SCSS Formatting](css/scss-css-formatting.md)
-8. [Javascript Formatting &amp; Framework](/js/js.md)
+8. [Javascript Formatting &amp; Framework](/js/README.md)
 9. [JSON Formatting](/js/json.md)
-10. [API Formatting](/api/api.md)
-11. [PHP Formatting](/php/php.md)
+10. [API Formatting](/api/README.md)
+11. [PHP Formatting](/php/README.md)
 
 ## <a name="overview"></a>Overview
 
