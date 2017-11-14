@@ -30,15 +30,17 @@ The modules folders contain:
         ├── helpers
         |   ├── _utils.scss
         |   └── _vars.scss
+        ├── modifiers
+        |   └── _buttons.scss
+        ├── modules
+        |   ├── _block?.scss
+        |   └── blocks?
+        |       └── _block?.scss
         ├── shared
         |   ├── _header.scss
         |   ├── _main.scss
         |   ├── _footer.scss
         |   └── _nav.scss
-        ├── modules
-        |   ├── _block?.scss
-        |   └── blocks?
-        |       └── _block?.scss
         ├── ie8.scss
         └── styles.scss
 ```
@@ -62,6 +64,8 @@ When building a comprehensive CMS with different sub sections that do not follow
         |   |   ├── _main.scss
         |   |   ├── _footer.scss
         |   |   └── _nav.scss
+        |   ├── modifiers?
+        |   |   └── _buttons.scss
         |   └── modules
         |       ├── _block?.scss
         |       └── blocks?
@@ -72,6 +76,8 @@ When building a comprehensive CMS with different sub sections that do not follow
         |   |   ├── _main.scss
         |   |   ├── _footer.scss
         |   |   └── _nav.scss
+        |   ├── modifiers?
+        |   |   └── _buttons.scss
         |   └── modules
         |       ├── _block?.scss
         |       └── blocks?
